@@ -1,0 +1,13 @@
+.gradient-bg {
+    background-color: lime;
+}
+
+.logo {
+    text-decoration: none;
+    color: #000;
+    transition: color .3s;
+}
+
+.logo:hover {
+    color: #FFF;
+}
