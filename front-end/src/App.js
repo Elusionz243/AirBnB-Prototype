@@ -1,20 +1,31 @@
 import "./App.css";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 
 import Navbar from "./components/navbar/Navbar";
 import LandingPage from "./components/landingPage/LandingPage";
-import Booking from "./components/booking/Booking";
+import Bnb from "./components/booking/Bnb";
+import NotFound from "./components/errors/NotFound";
 
 function App() {
-  const navbarLinks = ["Home", "BnBs", "Bookings", "About Us"];
+  let navigate = useNavigate();
 
+  let selectedBookingCard;
+  const selectCard = (bookingCard, i) => {
+    // console.log(cardRefs.current[i]);
+    console.log(bookingCard);
+    selectedBookingCard = bookingCard;
+    navigate(`/bnb/${i}`);
+  };
   return (
     <div className="container">
-      <Navbar navbarLinks={navbarLinks} />
+      <Navbar />
       <Routes>
-        <Route path="/Home" element={<LandingPage />} />
-        <Route path="/booking" element={<Booking />} />
-        <Route path="/" element={<Navigate to="/Home" />} />
+        <Route path="/" element={<LandingPage selectCard={selectCard} />} />
+        <Route
+          path="/bnb/:bnb_id"
+          element={<Bnb selectedBookingCard={selectedBookingCard} />}
+        />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

@@ -1,29 +1,26 @@
-.navbar-bg {
-    background: url("https://images.unsplash.com/photo-1529704817457-9f19aad72e1b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fGJlZCUyMGFuZCUyMGJyZWFrZmFzdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    /* filter: brightness(95%); */
-    padding: 10% 0;
-}
-
 .logo {
-    text-decoration: none;
-    font-size: 5.5rem;
-    color: rgb(0, 221, 255);
-    /* transition: color .3s; */
+  text-decoration: none;
+  font-size: 3rem;
+  color: rgb(0, 221, 255);
 }
 
 .navbar-links {
-    color: rgb(255, 255, 255);
-    font-size: 1.75rem;
-    margin: 0 3%;
+  color: rgb(0, 221, 255);
+  font-size: 1.6rem;
+  margin: 0 3%;
 }
 
 .navbar-links:hover {
-    color: rgb(21, 255, 0);
+  color: rgb(21, 255, 0);
 }
 
-.navbar-container {
-    filter: brightness(100%);
+.searchbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+}
+
+.searchbar {
+  border-radius: 25px;
 }
